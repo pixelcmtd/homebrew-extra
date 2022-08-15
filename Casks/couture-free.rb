@@ -7,5 +7,5 @@ cask "couture-free" do
   desc "A free transient processor"
   homepage "https://www.auburnsounds.com/products/Couture.html"
 
-  pkg "macOS/Couture-FREE-1.6.0.pkg"
+  pkg "Couture-FREE-1.6/macOS/Couture-FREE-1.6.0.pkg"
 end
