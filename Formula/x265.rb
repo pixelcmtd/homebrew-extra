@@ -1,10 +1,8 @@
 class X265 < Formula
   desc "H.265/HEVC encoder"
   homepage "https://bitbucket.org/multicoreware/x265_git"
-  url "https://bitbucket.org/multicoreware/x265_git/get/3.5.tar.gz"
-  sha256 "5ca3403c08de4716719575ec56c686b1eb55b078c0fe50a064dcf1ac20af1618"
   license "GPL-2.0-only"
-  head "https://bitbucket.org/multicoreware/x265_git.git", branch: "master"
+  head "https://bitbucket.org/multicoreware/x265_git.git", revision: "0b75c44c10e605fe9e9ebed58f04a46271131827"
 
   depends_on "cmake" => :build
 
@@ -15,7 +13,6 @@ class X265 < Formula
   def install
     # Build based off the script at ./build/linux/multilib.sh
     args = std_cmake_args + %W[
-      -DENABLE_ASSEMBLY=ON
       -DLINKED_10BIT=ON
       -DLINKED_12BIT=ON
       -DEXTRA_LINK_FLAGS=-L.
